@@ -9,8 +9,9 @@ bot = ChatBot(
     'TiPi',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
+        ''
         'chatterbot.logic.BestMatch'
-    ],
+    ]
 )
 
 training = ChatterBotCorpusTrainer(bot)
