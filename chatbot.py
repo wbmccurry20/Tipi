@@ -7,9 +7,7 @@ app = Flask(__name__)
 
 bot = ChatBot(
     'TiPi',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
-        ''
         'chatterbot.logic.BestMatch'
     ]
 )
