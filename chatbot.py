@@ -9,22 +9,14 @@ bot = ChatBot(
     'TiPi',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
     ],
-    database_uri='sqlite:///database.sqlite3'
 )
 
-training = ListTrainer(bot)
-training.train([
-        'What is your name?'
-        'My name is TiPi'
-        'What are you?'
-        'I am a bot' 
-        'Who created you?'
-        'You did sir'
-        ])
+training = ChatterBotCorpusTrainer(bot)
+training.train(
+        "chatterbot.corpus.english"
+        )
 
 
 @app.route("/")
