@@ -1,0 +1,89 @@
+header {
+	background-color: #d88753;
+	top: 0px;
+	padding-bottom: 0px;
+	border: solid #a6663f 5px;
+	border-radius: 1em;
+	height: 50px;
+}
+
+h1{
+	margin-block-start: 0px;
+	color: #374243;
+}
+
+p {
+	padding: 5px;
+}
+
+html{
+	min-height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-color: #d5dac9;
+	margin: 0px;
+	padding: 24px;
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	
+	border: solid #374243 5px;
+    border-radius: 2em;
+}
+
+.toppie {
+	padding-top: 10px;
+	padding-left: 55px;
+	padding-right: 35px;
+}
+
+.container{
+    width: 100%;
+	height: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: #739992;
+	padding-bottom: 100%;
+
+	border: solid #374243 5px;
+    border-radius: 2em;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 300px;
+    background: #d5dac9;
+    margin: 20px 0px 20px 55px; 
+    border: 2px solid #374243;
+	border-radius: 1em;
+    box-sizing: border-box;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: #d5dac9;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:40%;
+        margin-left: 40px;
+}

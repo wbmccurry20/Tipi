@@ -2,15 +2,19 @@ from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
+from pymongo import MongoClient
+from pymongo import OperationFailure
 
 app = Flask(__name__)
 
 bot = ChatBot(
     'TiPi',
+    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
+    database="TiPi",
+    database_uri="http://192.168.1.70:28017/",
     logic_adapters=[
         'chatterbot.logic.BestMatch'
-    ]
-)
+    ])
 
 training = ChatterBotCorpusTrainer(bot)
 training.train(
@@ -20,7 +24,7 @@ training.train(
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/get")
 def get_bot_response():
