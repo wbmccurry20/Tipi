@@ -3,6 +3,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 from pymongo import MongoClient
+import nltk
 
 
 app = Flask(__name__)
@@ -36,5 +37,5 @@ def get_bot_response():
     return str(bot.get_response(userText))
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',debug=True)
+    app.run()
 
