@@ -1,1 +1,1 @@
-web: gunicorn app:tipi-bot
+web: gunicorn run:tipi
