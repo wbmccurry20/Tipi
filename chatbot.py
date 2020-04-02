@@ -9,12 +9,16 @@ app = Flask(__name__)
 
 bot = ChatBot(
     'TiPi',
-    #storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
-    #database="TiPi",
-    #database_uri="http://192.168.1.70:28017/",
+    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
+    database="tipi_db",
+    database_uri="mongodb://localhost/tipi_db",
     logic_adapters=[
         'chatterbot.logic.BestMatch'
-    ])
+    ],
+    filters=[
+        'chatterbot.filters.RepetitiveResponseFilter'
+    ]
+)
 
 training = ChatterBotCorpusTrainer(bot)
 training.train(
