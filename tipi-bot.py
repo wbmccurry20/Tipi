@@ -6,7 +6,7 @@ from pymongo import MongoClient
 import nltk
 
 
-app = Flask(__name__)
+tipi = Flask(__name__)
 
 bot = ChatBot(
     'TiPi',
@@ -37,5 +37,5 @@ def get_bot_response():
     return str(bot.get_response(userText))
 
 if __name__ == "__main__":
-    app.run()
+    tipi.run()
 
