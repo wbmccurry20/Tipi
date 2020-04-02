@@ -1,2 +1,1 @@
-web: gunicorn tipi-bot:app
-web: gunicorn run:app
+web: gunicorn --bind 0.0.0.0:$PORT tipi-bot:app
