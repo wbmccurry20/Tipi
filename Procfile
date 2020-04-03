@@ -1,1 +1,1 @@
-web: gunicorn tipi:app
+web: gunicorn tipi:run
