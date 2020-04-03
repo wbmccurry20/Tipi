@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 bot = ChatBot(
     'TiPi',
-    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
-    database="tipi_db",
-    database_uri="mongodb://localhost/tipi_db",
+    #storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
+    #database="tipi_db",
+    #database_uri="mongodb://localhost/tipi_db",
     logic_adapters=[
         'chatterbot.logic.BestMatch'
     ],
