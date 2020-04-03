@@ -5,7 +5,6 @@ from chatterbot.trainers import ListTrainer
 from pymongo import MongoClient
 import nltk
 
-
 app = Flask(__name__)
 
 bot = ChatBot(
@@ -35,6 +34,7 @@ def home():
 def get_bot_response():
     userText = request.args.get('msg')
     return str(bot.get_response(userText))
+
 
 if __name__ == "__main__":
     app.run()
