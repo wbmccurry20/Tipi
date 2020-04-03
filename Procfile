@@ -1,1 +1,1 @@
-web: gunicorn tipi-bot:app --log-file=-
+web: gunicorn tipi-bot:app

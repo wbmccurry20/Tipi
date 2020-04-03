@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
+import nltk.corpus
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 from pymongo import MongoClient
-import nltk
 
 app = Flask(__name__)
 
