@@ -36,23 +36,5 @@ def get_bot_response():
     userText = request.args.get('msg')
     return str(bot.get_response(userText))
 
-
-import requests
-
-
-def count_words_at_url(url):
-    resp = requests.get(url)
-    return len(resp.text.split())
-
-
-from rq import Queue
-from worker import conn
-
-q = Queue(connection=conn)
-
-import utils
-
-result = q.enqueue(count_words_at_url, 'http://heroku.com')
-
 if __name__ == "__main__":
     app.run()
