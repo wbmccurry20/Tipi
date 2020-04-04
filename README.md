@@ -9,7 +9,7 @@ These are the simple instructions to run our program, we hope to soon have a fun
 #### Prerequisites
 ``` 
 Python3.7.6
-chatterbot 1.0.0
+chatterbot 1.0.5
 ```
 
 #### Install & Run
@@ -24,4 +24,5 @@ cd TiPi_Bot
     - Ala Hataf
     - Dave Johnson
     - Matthew King 
+    - Adam Hoogstraal
 
