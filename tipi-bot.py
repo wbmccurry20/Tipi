@@ -5,6 +5,8 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 from pymongo import MongoClient
 
+from datetime import datetime
+
 app = Flask(__name__)
 
 bot = ChatBot(
