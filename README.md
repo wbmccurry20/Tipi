@@ -19,10 +19,3 @@ cd TiPi_Bot
 ./chatbot.py
 ```
 
-### Authors
-    - Will McCurry
-    - Ala Hataf
-    - Dave Johnson
-    - Matthew King 
-    - Adam Hoogstraal
-
